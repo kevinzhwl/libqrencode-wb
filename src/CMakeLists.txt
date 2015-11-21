@@ -15,7 +15,7 @@ set(CMAKE_DEBUG_POSTFIX "d")
 #  RelWithDebInfo : w/ debug symbols, w/ optimization
 #  MinSizeRel     : w/o debug symbols, w/ optimization, stripped binaries
 
-#set(CMAKE_BUILD_TYPE RelWithDebInfo)
+set(CMAKE_BUILD_TYPE Release)
 if(NOT CMAKE_BUILD_TYPE)
     #set(CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING "Build type" FORCE)
     set(CMAKE_BUILD_TYPE Debug)
@@ -29,9 +29,9 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 set(TEST_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 
 #set(CMAKE_INSTALL_PREFIX ${PROJECT_BINARY_DIR}/bin)
-set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/../${PROJECT_NAME}-installation")
+set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/../installation")
 IF(CMAKE_INSTALL_PREFIX)
-set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/../${PROJECT_NAME}-installation")
+set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/../installation")
 ENDIF()
 
 message(STATUS "Install prefix: ${CMAKE_INSTALL_PREFIX}")
